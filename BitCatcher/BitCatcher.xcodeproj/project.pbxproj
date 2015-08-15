@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		44FB37FD1B7F72AC00BAD031 /* Braintree.h in Headers */ = {isa = PBXBuildFile; fileRef = 44FB37FC1B7F72AC00BAD031 /* Braintree.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		44FB38031B7F72AC00BAD031 /* Braintree.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44FB37F81B7F72AC00BAD031 /* Braintree.framework */; };
+		44FB380C1B7F72AC00BAD031 /* BraintreeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 44FB380B1B7F72AC00BAD031 /* BraintreeTests.m */; };
+		44FB380F1B7F72AC00BAD031 /* Braintree.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44FB37F81B7F72AC00BAD031 /* Braintree.framework */; };
+		44FB38101B7F72AC00BAD031 /* Braintree.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 44FB37F81B7F72AC00BAD031 /* Braintree.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		EDDE26731B7F693F00C6DA2A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDDE26721B7F693F00C6DA2A /* AppDelegate.swift */; };
 		EDDE26751B7F693F00C6DA2A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDDE26741B7F693F00C6DA2A /* ViewController.swift */; };
 		EDDE26781B7F693F00C6DA2A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDDE26761B7F693F00C6DA2A /* Main.storyboard */; };
@@ -16,6 +21,27 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		44FB38041B7F72AC00BAD031 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EDDE26651B7F693F00C6DA2A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 44FB37F71B7F72AC00BAD031;
+			remoteInfo = Braintree;
+		};
+		44FB38061B7F72AC00BAD031 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EDDE26651B7F693F00C6DA2A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EDDE266C1B7F693F00C6DA2A;
+			remoteInfo = BitCatcher;
+		};
+		44FB380D1B7F72AC00BAD031 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EDDE26651B7F693F00C6DA2A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 44FB37F71B7F72AC00BAD031;
+			remoteInfo = Braintree;
+		};
 		EDDE26831B7F693F00C6DA2A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = EDDE26651B7F693F00C6DA2A /* Project object */;
@@ -25,7 +51,27 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		44FB38161B7F72AC00BAD031 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				44FB38101B7F72AC00BAD031 /* Braintree.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		44FB37F81B7F72AC00BAD031 /* Braintree.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Braintree.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		44FB37FB1B7F72AC00BAD031 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		44FB37FC1B7F72AC00BAD031 /* Braintree.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Braintree.h; sourceTree = "<group>"; };
+		44FB38021B7F72AC00BAD031 /* BraintreeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BraintreeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		44FB380A1B7F72AC00BAD031 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		44FB380B1B7F72AC00BAD031 /* BraintreeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BraintreeTests.m; sourceTree = "<group>"; };
 		EDDE266D1B7F693F00C6DA2A /* BitCatcher.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BitCatcher.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDDE26711B7F693F00C6DA2A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EDDE26721B7F693F00C6DA2A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -39,10 +85,26 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		44FB37F41B7F72AC00BAD031 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		44FB37FF1B7F72AC00BAD031 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				44FB38031B7F72AC00BAD031 /* Braintree.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		EDDE266A1B7F693F00C6DA2A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				44FB380F1B7F72AC00BAD031 /* Braintree.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,11 +118,47 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		44FB37F91B7F72AC00BAD031 /* Braintree */ = {
+			isa = PBXGroup;
+			children = (
+				44FB37FC1B7F72AC00BAD031 /* Braintree.h */,
+				44FB37FA1B7F72AC00BAD031 /* Supporting Files */,
+			);
+			path = Braintree;
+			sourceTree = "<group>";
+		};
+		44FB37FA1B7F72AC00BAD031 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				44FB37FB1B7F72AC00BAD031 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		44FB38081B7F72AC00BAD031 /* BraintreeTests */ = {
+			isa = PBXGroup;
+			children = (
+				44FB380B1B7F72AC00BAD031 /* BraintreeTests.m */,
+				44FB38091B7F72AC00BAD031 /* Supporting Files */,
+			);
+			path = BraintreeTests;
+			sourceTree = "<group>";
+		};
+		44FB38091B7F72AC00BAD031 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				44FB380A1B7F72AC00BAD031 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		EDDE26641B7F693F00C6DA2A = {
 			isa = PBXGroup;
 			children = (
 				EDDE266F1B7F693F00C6DA2A /* BitCatcher */,
 				EDDE26851B7F693F00C6DA2A /* BitCatcherTests */,
+				44FB37F91B7F72AC00BAD031 /* Braintree */,
+				44FB38081B7F72AC00BAD031 /* BraintreeTests */,
 				EDDE266E1B7F693F00C6DA2A /* Products */,
 			);
 			sourceTree = "<group>";
@@ -70,6 +168,8 @@
 			children = (
 				EDDE266D1B7F693F00C6DA2A /* BitCatcher.app */,
 				EDDE26821B7F693F00C6DA2A /* BitCatcherTests.xctest */,
+				44FB37F81B7F72AC00BAD031 /* Braintree.framework */,
+				44FB38021B7F72AC00BAD031 /* BraintreeTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -114,7 +214,55 @@
 		};
 /* End PBXGroup section */
 
+/* Begin PBXHeadersBuildPhase section */
+		44FB37F51B7F72AC00BAD031 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				44FB37FD1B7F72AC00BAD031 /* Braintree.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
 /* Begin PBXNativeTarget section */
+		44FB37F71B7F72AC00BAD031 /* Braintree */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 44FB38151B7F72AC00BAD031 /* Build configuration list for PBXNativeTarget "Braintree" */;
+			buildPhases = (
+				44FB37F31B7F72AC00BAD031 /* Sources */,
+				44FB37F41B7F72AC00BAD031 /* Frameworks */,
+				44FB37F51B7F72AC00BAD031 /* Headers */,
+				44FB37F61B7F72AC00BAD031 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Braintree;
+			productName = Braintree;
+			productReference = 44FB37F81B7F72AC00BAD031 /* Braintree.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		44FB38011B7F72AC00BAD031 /* BraintreeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 44FB38171B7F72AC00BAD031 /* Build configuration list for PBXNativeTarget "BraintreeTests" */;
+			buildPhases = (
+				44FB37FE1B7F72AC00BAD031 /* Sources */,
+				44FB37FF1B7F72AC00BAD031 /* Frameworks */,
+				44FB38001B7F72AC00BAD031 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				44FB38051B7F72AC00BAD031 /* PBXTargetDependency */,
+				44FB38071B7F72AC00BAD031 /* PBXTargetDependency */,
+			);
+			name = BraintreeTests;
+			productName = BraintreeTests;
+			productReference = 44FB38021B7F72AC00BAD031 /* BraintreeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		EDDE266C1B7F693F00C6DA2A /* BitCatcher */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = EDDE268C1B7F693F00C6DA2A /* Build configuration list for PBXNativeTarget "BitCatcher" */;
@@ -122,10 +270,12 @@
 				EDDE26691B7F693F00C6DA2A /* Sources */,
 				EDDE266A1B7F693F00C6DA2A /* Frameworks */,
 				EDDE266B1B7F693F00C6DA2A /* Resources */,
+				44FB38161B7F72AC00BAD031 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				44FB380E1B7F72AC00BAD031 /* PBXTargetDependency */,
 			);
 			name = BitCatcher;
 			productName = BitCatcher;
@@ -159,6 +309,13 @@
 				LastUpgradeCheck = 0640;
 				ORGANIZATIONNAME = "Hack the Planet:Dank Memers";
 				TargetAttributes = {
+					44FB37F71B7F72AC00BAD031 = {
+						CreatedOnToolsVersion = 6.3.2;
+					};
+					44FB38011B7F72AC00BAD031 = {
+						CreatedOnToolsVersion = 6.3.2;
+						TestTargetID = EDDE266C1B7F693F00C6DA2A;
+					};
 					EDDE266C1B7F693F00C6DA2A = {
 						CreatedOnToolsVersion = 6.4;
 					};
@@ -183,11 +340,27 @@
 			targets = (
 				EDDE266C1B7F693F00C6DA2A /* BitCatcher */,
 				EDDE26811B7F693F00C6DA2A /* BitCatcherTests */,
+				44FB37F71B7F72AC00BAD031 /* Braintree */,
+				44FB38011B7F72AC00BAD031 /* BraintreeTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		44FB37F61B7F72AC00BAD031 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		44FB38001B7F72AC00BAD031 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		EDDE266B1B7F693F00C6DA2A /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -208,6 +381,21 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		44FB37F31B7F72AC00BAD031 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		44FB37FE1B7F72AC00BAD031 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				44FB380C1B7F72AC00BAD031 /* BraintreeTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		EDDE26691B7F693F00C6DA2A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -228,6 +416,21 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		44FB38051B7F72AC00BAD031 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 44FB37F71B7F72AC00BAD031 /* Braintree */;
+			targetProxy = 44FB38041B7F72AC00BAD031 /* PBXContainerItemProxy */;
+		};
+		44FB38071B7F72AC00BAD031 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EDDE266C1B7F693F00C6DA2A /* BitCatcher */;
+			targetProxy = 44FB38061B7F72AC00BAD031 /* PBXContainerItemProxy */;
+		};
+		44FB380E1B7F72AC00BAD031 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 44FB37F71B7F72AC00BAD031 /* Braintree */;
+			targetProxy = 44FB380D1B7F72AC00BAD031 /* PBXContainerItemProxy */;
+		};
 		EDDE26841B7F693F00C6DA2A /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = EDDE266C1B7F693F00C6DA2A /* BitCatcher */;
@@ -255,6 +458,84 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		44FB38111B7F72AC00BAD031 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = Braintree/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		44FB38121B7F72AC00BAD031 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = Braintree/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		44FB38131B7F72AC00BAD031 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = BraintreeTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BitCatcher.app/BitCatcher";
+			};
+			name = Debug;
+		};
+		44FB38141B7F72AC00BAD031 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = BraintreeTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BitCatcher.app/BitCatcher";
+			};
+			name = Release;
+		};
 		EDDE268A1B7F693F00C6DA2A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -393,6 +674,22 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		44FB38151B7F72AC00BAD031 /* Build configuration list for PBXNativeTarget "Braintree" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				44FB38111B7F72AC00BAD031 /* Debug */,
+				44FB38121B7F72AC00BAD031 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		44FB38171B7F72AC00BAD031 /* Build configuration list for PBXNativeTarget "BraintreeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				44FB38131B7F72AC00BAD031 /* Debug */,
+				44FB38141B7F72AC00BAD031 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		EDDE26681B7F693F00C6DA2A /* Build configuration list for PBXProject "BitCatcher" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -409,6 +706,7 @@
 				EDDE268E1B7F693F00C6DA2A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		EDDE268F1B7F693F00C6DA2A /* Build configuration list for PBXNativeTarget "BitCatcherTests" */ = {
 			isa = XCConfigurationList;
@@ -417,6 +715,7 @@
 				EDDE26911B7F693F00C6DA2A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
