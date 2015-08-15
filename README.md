@@ -1,2 +1,2 @@
-# bitcatcher
+# BitCatcher
 hack the planet
