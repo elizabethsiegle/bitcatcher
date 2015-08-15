@@ -7,14 +7,14 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>DA3758C6-A05D-48AB-9A62-37F47CA0F134</string>
 	<key>IDESourceControlProjectName</key>
-	<string>BitCatcher</string>
+	<string>project</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>D051BF07A07AE27FB6286713AB303E8E9EFEB948</key>
 		<string>https://github.com/elizabethsiegle/bitcatcher.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>BitCatcher/BitCatcher.xcodeproj</string>
+	<string>BitCatcher/BitCatcher.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>D051BF07A07AE27FB6286713AB303E8E9EFEB948</key>
