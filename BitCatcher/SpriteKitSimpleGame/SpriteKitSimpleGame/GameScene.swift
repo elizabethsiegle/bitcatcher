@@ -68,18 +68,37 @@ struct PhysicsCategory {
   static let Projectile: UInt32 = 0b10
 }
 
+struct Layer {
+    static let Background: CGFloat = 0
+    static let Crocodile: CGFloat = 1
+    static let Rope: CGFloat = 1
+    static let Prize: CGFloat = 2
+    static let Foreground: CGFloat = 3
+}
+
 class GameScene: SKScene, SKPhysicsContactDelegate
 {
   
   let player = SKSpriteNode(imageNamed: "bitplayer.png")
   var monstersDestroyed = 0
+  var billsCollected = 0
+  var coinsCollected = 0
+  let start = NSDate(); // <<<<<<<<<< Start time
   
-  override func didMoveToView(view: SKView) {
+  override func didMoveToView(view: SKView)
+  {
+    //set bg
+    let background = SKSpriteNode(imageNamed: "background")
+    background.anchorPoint = CGPointMake(0, 1)
+    background.position = CGPointMake(0, size.height)
+    background.zPosition = Layer.Background
+    background.size = CGSize(width: self.view!.bounds.size.width, height:self.view!.bounds.size.height)
+    addChild(background)
   
     playBackgroundMusic("background-music-aac.caf")
   
     backgroundColor = SKColor.whiteColor()
-    player.position = CGPoint(x: size.width/2, y: player.size.height * 2)
+    player.position = CGPoint(x: size.width/2, y: player.size.height)
     addChild(player)
     
     physicsWorld.gravity = CGVectorMake(0, 0)
@@ -114,6 +133,16 @@ class GameScene: SKScene, SKPhysicsContactDelegate
 
   func random(#min: CGFloat, max: CGFloat) -> CGFloat {
     return random() * (max - min) + min
+  }
+
+  //get time elapsed
+  func evaluateProblem() -> Double
+  {
+    
+    let end = NSDate();   // <<<<<<<<<<   end time
+
+    let timeInterval: Double = end.timeIntervalSinceDate(start); // <<<<< Difference in seconds (double)
+    return timeInterval
   }
 
   func addCoin()
@@ -211,7 +240,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate
     
   }
   
-  func projectileDidCollideWithMonster(projectile:SKSpriteNode, monster:SKSpriteNode) {
+  func projectileDidCollideWithMonster(projectile:SKSpriteNode, monster:SKSpriteNode)
+  {
     println("Hit")
     projectile.removeFromParent()
     monster.removeFromParent()
@@ -224,6 +254,26 @@ class GameScene: SKScene, SKPhysicsContactDelegate
     }
     
   }
+    
+  //got a coin
+  func collectedCoin(projectile:SKSpriteNode, monster:SKSpriteNode)
+  {
+      println("Got Coin")
+      projectile.removeFromParent()
+      monster.removeFromParent()
+        
+      coinsCollected++
+  }
+    
+  //got a bill
+    func collectedBill(projectile:SKSpriteNode, monster:SKSpriteNode)
+    {
+        println("Got Bill")
+        projectile.removeFromParent()
+        monster.removeFromParent()
+        
+        billsCollected++
+    }
   
   func didBeginContact(contact: SKPhysicsContact)
   {
@@ -241,7 +291,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate
     
     // 2
     if ((firstBody.categoryBitMask & PhysicsCategory.Coin != 0) &&
-        (secondBody.categoryBitMask & PhysicsCategory.Projectile != 0)) {
+        (secondBody.categoryBitMask & PhysicsCategory.Projectile != 0))
+    {
       projectileDidCollideWithMonster(firstBody.node as! SKSpriteNode, monster: secondBody.node as! SKSpriteNode)
     }
     
