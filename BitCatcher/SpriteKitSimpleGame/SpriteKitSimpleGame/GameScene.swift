@@ -65,6 +65,7 @@ struct PhysicsCategory {
   static let All       : UInt32 = UInt32.max
   static let Coin   : UInt32 = 0b1
   static let Bill   : UInt32 = 0b1
+  static let Player : UInt32 = UInt32.max
   static let Projectile: UInt32 = 0b10
 }
 
@@ -231,11 +232,13 @@ class GameScene: SKScene, SKPhysicsContactDelegate
     let touch = touches.first as! UITouch
     let touchLocation = touch.locationInNode(self)
     
-    var point = CGPoint(x: touchLocation.x, y: player.position.y)
+    var targetPoint = CGPoint(x: touchLocation.x, y: player.position.y)
    
-    //stuff
-    var actualDuration:NSTimeInterval = 1.0
-    var actionMove = SKAction.moveTo(point, duration: actualDuration)
+    //calculate the time it takes to move that distance
+    var horizontalDistance = abs(touchLocation.x - player.position.x)
+    var multiplier = horizontalDistance / 100.0
+    var actualDuration:NSTimeInterval = NSTimeInterval(multiplier)
+    var actionMove = SKAction.moveTo(targetPoint, duration: actualDuration)
     player.runAction(actionMove)
     
   }
@@ -281,10 +284,14 @@ class GameScene: SKScene, SKPhysicsContactDelegate
     // 1
     var firstBody: SKPhysicsBody
     var secondBody: SKPhysicsBody
-    if contact.bodyA.categoryBitMask < contact.bodyB.categoryBitMask {
+    
+    if contact.bodyA.categoryBitMask < contact.bodyB.categoryBitMask
+    {
       firstBody = contact.bodyA
       secondBody = contact.bodyB
-    } else {
+    }
+    else
+    {
       firstBody = contact.bodyB
       secondBody = contact.bodyA
     }
