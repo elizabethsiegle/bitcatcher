@@ -32,7 +32,6 @@ class GameOverScene: SKScene
         let reveal = SKTransition.flipHorizontalWithDuration(0.5)
         let scene = GameScene(size: size)
         self.view?.presentScene(scene, transition:reveal)
-        
       }
     ]))
     

@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="15A244d" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="brj-kj-h7c">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--login-->
@@ -16,28 +17,58 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d1p-45-CXK">
-                                <rect key="frame" x="281" y="285" width="38" height="30"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mainscreen" translatesAutoresizingMaskIntoConstraints="NO" id="rdl-XK-m8E">
+                                <rect key="frame" x="-16" y="0.0" width="632" height="600"/>
                                 <animations/>
-                                <state key="normal" title="Login">
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d1p-45-CXK">
+                                <rect key="frame" x="285" y="285" width="30" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Play">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <segue destination="LVB-YS-i5n" kind="show" id="DqH-na-FLy"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zB5-EE-1OS">
+                                <rect key="frame" x="231" y="285" width="46" height="30"/>
+                                <animations/>
+                                <state key="normal" title="About">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nyH-62-kjm">
+                                <rect key="frame" x="323" y="285" width="70" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Highscore">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wlr-wg-cCt">
+                                <rect key="frame" x="265" y="306" width="70" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Insert 25¢">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="rdl-XK-m8E" secondAttribute="trailing" constant="-32" id="RF3-P1-x0q"/>
                             <constraint firstAttribute="centerY" secondItem="d1p-45-CXK" secondAttribute="centerY" id="b3E-8Z-Hdp"/>
                             <constraint firstAttribute="centerX" secondItem="d1p-45-CXK" secondAttribute="centerX" id="iyE-A5-Ynp"/>
+                            <constraint firstAttribute="centerX" secondItem="rdl-XK-m8E" secondAttribute="centerX" id="n9M-fw-gtS"/>
+                            <constraint firstAttribute="centerY" secondItem="rdl-XK-m8E" secondAttribute="centerY" id="nmQ-Oi-7Fx"/>
+                            <constraint firstItem="rdl-XK-m8E" firstAttribute="leading" secondItem="2M1-I5-LGd" secondAttribute="leadingMargin" constant="-32" id="tgG-QD-R6f"/>
+                            <constraint firstItem="RK4-ho-FLv" firstAttribute="top" secondItem="rdl-XK-m8E" secondAttribute="bottom" id="wV5-jO-wyR"/>
                         </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eAa-gG-kB4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-448" y="300"/>
+            <point key="canvasLocation" x="-488" y="214"/>
         </scene>
         <!--Game View Controller-->
         <scene sceneID="CtS-rA-C9T">
@@ -58,4 +89,7 @@
             </objects>
         </scene>
     </scenes>
+    <resources>
+        <image name="mainscreen" width="2028" height="1080"/>
+    </resources>
 </document>
