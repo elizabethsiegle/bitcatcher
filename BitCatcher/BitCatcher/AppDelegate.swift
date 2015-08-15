@@ -6,11 +6,11 @@
 //  Copyright (c) 2015 Hack the Planet:Dank Memers. All rights reserved.
 //
 
-import UIKit
 import AppDelegate.h
-import Braintree/Braintree.h
+import Braintree.h
 
 @UIApplicationMain
+
 class AppDelegate: UIResponder, UIApplicationDelegate
 {
 
@@ -29,6 +29,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate
     func application(application: UIApplication, openURL url: NSURL, sourceApplication: String, annotation: AnyObject) -> Bool {
         return Braintree.handleOpenURL(url, sourceApplication: sourceApplication)
     }
+    
+//    MyViewController()
+//    
+//    Braintree * braintree
 
     func applicationWillResignActive(application: UIApplication)
     {
