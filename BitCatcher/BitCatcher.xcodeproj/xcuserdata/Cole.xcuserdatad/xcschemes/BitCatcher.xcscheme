@@ -34,6 +34,20 @@
                ReferencedContainer = "container:BitCatcher.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "NO"
+            buildForArchiving = "NO"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "44FB38011B7F72AC00BAD031"
+               BuildableName = "BraintreeTests.xctest"
+               BlueprintName = "BraintreeTests"
+               ReferencedContainer = "container:BitCatcher.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
       </BuildActionEntries>
    </BuildAction>
    <TestAction
@@ -49,6 +63,16 @@
                BlueprintIdentifier = "EDDE26811B7F693F00C6DA2A"
                BuildableName = "BitCatcherTests.xctest"
                BlueprintName = "BitCatcherTests"
+               ReferencedContainer = "container:BitCatcher.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "44FB38011B7F72AC00BAD031"
+               BuildableName = "BraintreeTests.xctest"
+               BlueprintName = "BraintreeTests"
                ReferencedContainer = "container:BitCatcher.xcodeproj">
             </BuildableReference>
          </TestableReference>
