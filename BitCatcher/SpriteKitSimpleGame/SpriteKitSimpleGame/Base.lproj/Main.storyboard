@@ -4,10 +4,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
     <scenes>
-        <!--login-->
+        <!--View Controller-->
         <scene sceneID="5hS-uk-g4J">
             <objects>
-                <viewController title="login" id="brj-kj-h7c" customClass="LoginViewController" customModule="SpriteKitSimpleGame" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="brj-kj-h7c" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="vea-Fg-yYC"/>
                         <viewControllerLayoutGuide type="bottom" id="RK4-ho-FLv"/>
@@ -16,8 +16,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d1p-45-CXK">
-                                <rect key="frame" x="281" y="285" width="38" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d1p-45-CXK">
+                                <rect key="frame" x="277" y="285" width="46" height="30"/>
                                 <animations/>
                                 <state key="normal" title="Login">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -37,7 +37,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eAa-gG-kB4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-448" y="300"/>
+            <point key="canvasLocation" x="-448" y="228"/>
         </scene>
         <!--Game View Controller-->
         <scene sceneID="CtS-rA-C9T">

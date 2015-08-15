@@ -20,8 +20,6 @@
 		3571650E19DB1F5500ED38A9 /* sprites.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 3571650B19DB1F5500ED38A9 /* sprites.atlas */; };
 		3571651019DB322700ED38A9 /* GameOverScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3571650F19DB322700ED38A9 /* GameOverScene.swift */; };
 		EDCA63D31B7F770B00177C97 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDCA63D21B7F770B00177C97 /* LoginViewController.swift */; };
-		EDCA63E11B7F920100177C97 /* bitplayer.png in Resources */ = {isa = PBXBuildFile; fileRef = EDCA63E01B7F920100177C97 /* bitplayer.png */; };
-		EDCA63E31B7FA26300177C97 /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = EDCA63E21B7FA26300177C97 /* background.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,8 +50,6 @@
 		3571650B19DB1F5500ED38A9 /* sprites.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = sprites.atlas; sourceTree = "<group>"; };
 		3571650F19DB322700ED38A9 /* GameOverScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameOverScene.swift; sourceTree = "<group>"; };
 		EDCA63D21B7F770B00177C97 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		EDCA63E01B7F920100177C97 /* bitplayer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bitplayer.png; path = sprites.atlas/bitplayer.png; sourceTree = "<group>"; };
-		EDCA63E21B7FA26300177C97 /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = background.png; path = Images.xcassets/background.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,8 +94,6 @@
 				3571650819DB1F5500ED38A9 /* Sounds */,
 				3571650B19DB1F5500ED38A9 /* sprites.atlas */,
 				357164E419DB1E4800ED38A9 /* AppDelegate.swift */,
-				EDCA63E21B7FA26300177C97 /* background.png */,
-				EDCA63E01B7F920100177C97 /* bitplayer.png */,
 				EDCA63D21B7F770B00177C97 /* LoginViewController.swift */,
 				357164E619DB1E4800ED38A9 /* GameScene.sks */,
 				357164E819DB1E4800ED38A9 /* GameScene.swift */,
@@ -231,10 +225,8 @@
 				3571650C19DB1F5500ED38A9 /* background-music-aac.caf in Resources */,
 				357164F319DB1E4800ED38A9 /* LaunchScreen.xib in Resources */,
 				357164F019DB1E4800ED38A9 /* Images.xcassets in Resources */,
-				EDCA63E11B7F920100177C97 /* bitplayer.png in Resources */,
 				357164E719DB1E4800ED38A9 /* GameScene.sks in Resources */,
 				357164EE19DB1E4800ED38A9 /* Main.storyboard in Resources */,
-				EDCA63E31B7FA26300177C97 /* background.png in Resources */,
 				3571650D19DB1F5500ED38A9 /* pew-pew-lei.caf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

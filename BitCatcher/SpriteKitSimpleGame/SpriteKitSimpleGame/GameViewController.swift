@@ -1,4 +1,10 @@
-//Cole Hudson
+//
+//  GameViewController.swift
+//  SpriteKitSimpleGame
+//
+//  Created by Main Account on 9/30/14.
+//  Copyright (c) 2014 Razeware LLC. All rights reserved.
+//
 
 import UIKit
 import SpriteKit
