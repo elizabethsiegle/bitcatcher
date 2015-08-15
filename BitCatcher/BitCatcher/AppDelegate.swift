@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import AppDelegate.h
+import Braintree/Braintree.h
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate
@@ -17,8 +19,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool
     {
+        Braintree.setReturnURLScheme("com.colehudson.payments")
         // Override point for customization after application launch.
         return true
+    }
+    
+    func application(application: UIApplication, openURL url: NSURL, sourceApplication: String, annotation: AnyObject) -> Bool {
+        return Braintree.handleOpenURL(url, sourceApplication: sourceApplication)
     }
 
     func applicationWillResignActive(application: UIApplication)

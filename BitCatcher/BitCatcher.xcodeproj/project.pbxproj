@@ -749,6 +749,7 @@
 				44FB38121B7F72AC00BAD031 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		44FB38171B7F72AC00BAD031 /* Build configuration list for PBXNativeTarget "BraintreeTests" */ = {
 			isa = XCConfigurationList;
@@ -757,6 +758,7 @@
 				44FB38141B7F72AC00BAD031 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		EDDE26681B7F693F00C6DA2A /* Build configuration list for PBXProject "BitCatcher" */ = {
 			isa = XCConfigurationList;
