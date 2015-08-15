@@ -6,10 +6,7 @@
 //  Copyright (c) 2015 Hack the Planet:Dank Memers. All rights reserved.
 //
 
-import UIKit
-import AppDelegate.h
-import Braintree/Braintree.h
-
+#import UIKit
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate
 {
