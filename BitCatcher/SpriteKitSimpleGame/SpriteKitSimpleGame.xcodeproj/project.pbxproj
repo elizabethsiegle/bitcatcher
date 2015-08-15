@@ -22,6 +22,7 @@
 		EDCA63D31B7F770B00177C97 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDCA63D21B7F770B00177C97 /* LoginViewController.swift */; };
 		EDCA63E11B7F920100177C97 /* bitplayer.png in Resources */ = {isa = PBXBuildFile; fileRef = EDCA63E01B7F920100177C97 /* bitplayer.png */; };
 		EDCA63E31B7FA26300177C97 /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = EDCA63E21B7FA26300177C97 /* background.png */; };
+		EDCA63E51B7FED8700177C97 /* mainscreen.png in Resources */ = {isa = PBXBuildFile; fileRef = EDCA63E41B7FED8700177C97 /* mainscreen.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,7 @@
 		EDCA63D21B7F770B00177C97 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		EDCA63E01B7F920100177C97 /* bitplayer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bitplayer.png; path = sprites.atlas/bitplayer.png; sourceTree = "<group>"; };
 		EDCA63E21B7FA26300177C97 /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = background.png; path = Images.xcassets/background.png; sourceTree = "<group>"; };
+		EDCA63E41B7FED8700177C97 /* mainscreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = mainscreen.png; path = ../../Assets/mainscreen.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +102,7 @@
 				357164E419DB1E4800ED38A9 /* AppDelegate.swift */,
 				EDCA63E21B7FA26300177C97 /* background.png */,
 				EDCA63E01B7F920100177C97 /* bitplayer.png */,
+				EDCA63E41B7FED8700177C97 /* mainscreen.png */,
 				EDCA63D21B7F770B00177C97 /* LoginViewController.swift */,
 				357164E619DB1E4800ED38A9 /* GameScene.sks */,
 				357164E819DB1E4800ED38A9 /* GameScene.swift */,
@@ -227,6 +230,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EDCA63E51B7FED8700177C97 /* mainscreen.png in Resources */,
 				3571650E19DB1F5500ED38A9 /* sprites.atlas in Resources */,
 				3571650C19DB1F5500ED38A9 /* background-music-aac.caf in Resources */,
 				357164F319DB1E4800ED38A9 /* LaunchScreen.xib in Resources */,
