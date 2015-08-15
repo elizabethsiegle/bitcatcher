@@ -79,6 +79,8 @@ struct Layer {
 
 class GameScene: SKScene, SKPhysicsContactDelegate
 {
+    //score
+    var score = 0
     
     let player = SKSpriteNode(imageNamed: "bitplayer.png")
     var monstersDestroyed = 0
@@ -101,6 +103,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate
         player.physicsBody?.categoryBitMask = ColliderType.PLAYER.rawValue
         player.physicsBody?.contactTestBitMask = PhysicsCategory.Player
         player.physicsBody?.collisionBitMask = 0
+        player.zPosition = Layer.Foreground
         
         //set bg
         let background = SKSpriteNode(imageNamed: "background")
@@ -169,6 +172,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate
         coin.physicsBody?.categoryBitMask = ColliderType.COIN.rawValue
         coin.physicsBody?.contactTestBitMask = PhysicsCategory.Projectile
         coin.physicsBody?.collisionBitMask = 0
+        coin.zPosition = Layer.Foreground
         
         // Determine where to spawn the monster along the X axis
         let actualX = random(min: coin.size.width/2, max: size.width - (coin.size.width/2))
@@ -207,6 +211,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate
         bill.physicsBody?.categoryBitMask = ColliderType.BILL.rawValue
         bill.physicsBody?.contactTestBitMask = PhysicsCategory.Projectile
         bill.physicsBody?.collisionBitMask = 0
+        bill.zPosition = Layer.Foreground
         
         // Determine where to spawn the monster along the X axis
         let actualX = random(min: bill.size.width/2, max: size.width - (bill.size.width/2))
@@ -279,6 +284,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate
         coin.node?.removeFromParent()
         
         coinsCollected++
+        score += 5
         println("Coins: \(coinsCollected)")
     }
     
@@ -289,6 +295,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate
         bill.node?.removeFromParent()
         
         billsCollected++
+        score++
         println("Bills: \(billsCollected)")
     }
     
