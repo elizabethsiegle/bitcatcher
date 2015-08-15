@@ -1,10 +1,4 @@
-//
-//  GameOverScene.swift
-//  SpriteKitSimpleGame
-//
-//  Created by Main Account on 9/30/14.
-//  Copyright (c) 2014 Razeware LLC. All rights reserved.
-//
+//Cole Hudson
 
 import Foundation
 import SpriteKit

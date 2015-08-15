@@ -1,10 +1,4 @@
-//
-//  GameScene.swift
-//  SpriteKitSimpleGame
-//
-//  Created by Main Account on 9/30/14.
-//  Copyright (c) 2014 Razeware LLC. All rights reserved.
-//
+//Cole Hudson
 
 import AVFoundation
 
@@ -76,7 +70,7 @@ struct PhysicsCategory {
 class GameScene: SKScene, SKPhysicsContactDelegate
 {
   
-  let player = SKSpriteNode(imageNamed: "player")
+  let player = SKSpriteNode(imageNamed: "bitplayer.png")
   var monstersDestroyed = 0
   
   override func didMoveToView(view: SKView) {

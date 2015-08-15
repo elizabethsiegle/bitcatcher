@@ -1,10 +1,5 @@
-//
-//  LoginViewController.swift
-//  
-//
-//  Created by Cole on 8/15/15.
-//
-//
+//Cole Hudson
+
 import UIKit
 
 class LoginViewController: UIViewController
