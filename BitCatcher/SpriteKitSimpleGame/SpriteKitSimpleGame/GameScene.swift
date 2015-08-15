@@ -184,7 +184,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate
         let actualDuration = random(min: CGFloat(20.0), max: CGFloat(20.0))
         
         // Create the actions
-        let actionMove = SKAction.moveTo(CGPoint(x: actualX, y: 0 - size.height), duration: NSTimeInterval(actualDuration))
+        let actionMove = SKAction.moveTo(CGPoint(x: actualX, y: 0 - coin.size.height), duration: NSTimeInterval(actualDuration))
         
         let actionMoveDone = SKAction.removeFromParent()
         
@@ -222,7 +222,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate
         let actualDuration = random(min: CGFloat(20.0), max: CGFloat(20.0))
         
         // Create the actions
-        let actionMove = SKAction.moveTo(CGPoint(x: actualX, y: 0 - size.height), duration: NSTimeInterval(actualDuration))
+        let actionMove = SKAction.moveTo(CGPoint(x: actualX, y: 0 - bill.size.height), duration: NSTimeInterval(actualDuration))
         
         let actionMoveDone = SKAction.removeFromParent()
         
@@ -273,21 +273,23 @@ class GameScene: SKScene, SKPhysicsContactDelegate
     }
     
     //got a coin
-    func collectedCoin(projectile:SKSpriteNode, coin:SKSpriteNode)
+    func collectedCoin(coin: SKPhysicsBody)
     {
         println("Got Coin")
-        coin.removeFromParent()
+        coin.node?.removeFromParent()
         
         coinsCollected++
+        println("Coins: \(coinsCollected)")
     }
     
     //got a bill
-    func collectedBill(projectile:SKSpriteNode, bill:SKSpriteNode)
+    func collectedBill(bill: SKPhysicsBody)
     {
         println("Got Bill")
-        bill.removeFromParent()
+        bill.node?.removeFromParent()
         
         billsCollected++
+        println("Bills: \(billsCollected)")
     }
     
     func didBeginContact(contact: SKPhysicsContact)
@@ -322,6 +324,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate
                 (secondBody.categoryBitMask & PhysicsCategory.Player != 0))
             {
                 print("bill")
+                collectedBill(secondBody)
                 //projectileDidCollideWithMonster(firstBody.node as! SKSpriteNode, monster: secondBody.node as! SKSpriteNode)
             }
         }
@@ -332,6 +335,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate
                 (secondBody.categoryBitMask & PhysicsCategory.Player != 0))
             {
                 print("coin")
+                collectedCoin(secondBody)
                 //projectileDidCollideWithMonster(firstBody.node as! SKSpriteNode, monster: secondBody.node as! SKSpriteNode)
             }
         }
