@@ -1,6 +1,8 @@
 //Cole Hudson
 
 import AVFoundation
+import Parse
+import Bolts
 
 var backgroundMusicPlayer: AVAudioPlayer!
 
@@ -194,6 +196,9 @@ class GameScene: SKScene, SKPhysicsContactDelegate
         
         let loseAction = SKAction.runBlock()
             {
+                //check to see if you got the hi-score
+                var query = PFQuery(className: "HighScore")
+                
                 let reveal = SKTransition.fadeWithDuration(0.5)
                 let gameOverScene = GameOverScene(size: self.size, won: false)
                 self.view?.presentScene(gameOverScene, transition: reveal)
