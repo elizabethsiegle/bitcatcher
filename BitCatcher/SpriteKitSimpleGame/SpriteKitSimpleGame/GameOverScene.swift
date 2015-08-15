@@ -1,25 +1,20 @@
-//
-//  GameOverScene.swift
-//  SpriteKitSimpleGame
-//
-//  Created by Main Account on 9/30/14.
-//  Copyright (c) 2014 Razeware LLC. All rights reserved.
-//
+//Cole Hudson
 
 import Foundation
 import SpriteKit
+import UIKit
 
-class GameOverScene: SKScene {
-  
-  init(size: CGSize, won:Bool) {
-    
+class GameOverScene: SKScene
+{
+  init(size: CGSize, won:Bool)
+  {
     super.init(size: size)
     
     // 1
     backgroundColor = SKColor.whiteColor()
     
     // 2
-    var message = won ? "You Won!" : "You Lose :["
+    var message = won ? "You Won!" : "Failure!!!"
     
     // 3
     let label = SKLabelNode(fontNamed: "Helvetica")
@@ -37,6 +32,7 @@ class GameOverScene: SKScene {
         let reveal = SKTransition.flipHorizontalWithDuration(0.5)
         let scene = GameScene(size: size)
         self.view?.presentScene(scene, transition:reveal)
+        
       }
     ]))
     

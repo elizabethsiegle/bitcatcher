@@ -1,10 +1,4 @@
-//
-//  GameScene.swift
-//  SpriteKitSimpleGame
-//
-//  Created by Main Account on 9/30/14.
-//  Copyright (c) 2014 Razeware LLC. All rights reserved.
-//
+//Cole Hudson
 
 import AVFoundation
 
@@ -69,35 +63,68 @@ extension CGPoint
 struct PhysicsCategory {
   static let None      : UInt32 = 0
   static let All       : UInt32 = UInt32.max
-  static let Monster   : UInt32 = 0b1       // 1
-  static let Projectile: UInt32 = 0b10      // 2
+  static let Coin   : UInt32 = 0b1
+  static let Bill   : UInt32 = 0b1
+  static let Player : UInt32 = UInt32.max
+  static let Projectile: UInt32 = 0b10
+}
+
+struct Layer {
+    static let Background: CGFloat = 0
+    static let Crocodile: CGFloat = 1
+    static let Rope: CGFloat = 1
+    static let Prize: CGFloat = 2
+    static let Foreground: CGFloat = 3
 }
 
 class GameScene: SKScene, SKPhysicsContactDelegate
 {
   
-  let player = SKSpriteNode(imageNamed: "player")
+  let player = SKSpriteNode(imageNamed: "bitplayer.png")
   var monstersDestroyed = 0
+  var billsCollected = 0
+  var coinsCollected = 0
+  let start = NSDate(); // <<<<<<<<<< Start time
   
-  override func didMoveToView(view: SKView) {
+  override func didMoveToView(view: SKView)
+  {
+    //set bg
+    let background = SKSpriteNode(imageNamed: "background")
+    background.anchorPoint = CGPointMake(0, 1)
+    background.position = CGPointMake(0, size.height)
+    background.zPosition = Layer.Background
+    background.size = CGSize(width: self.view!.bounds.size.width, height:self.view!.bounds.size.height)
+    addChild(background)
   
     playBackgroundMusic("background-music-aac.caf")
   
     backgroundColor = SKColor.whiteColor()
-    player.position = CGPoint(x: size.width/2, y: player.size.height * 2)
+    player.position = CGPoint(x: size.width/2, y: player.size.height)
     addChild(player)
     
     physicsWorld.gravity = CGVectorMake(0, 0)
     physicsWorld.contactDelegate = self
     
-    addMonster()
+    /*
+    addCoin()
+    addBill()
+    */
     
+    //add coins
     runAction(SKAction.repeatActionForever(
       SKAction.sequence([
-        SKAction.runBlock(addMonster),
-        SKAction.waitForDuration(5.0)
+        SKAction.runBlock(addCoin),
+        SKAction.waitForDuration(10.0)
       ])
     ))
+    
+    //add bills
+    runAction(SKAction.repeatActionForever(
+        SKAction.sequence([
+            SKAction.runBlock(addBill),
+            SKAction.waitForDuration(3.0)
+            ])
+        ))
     
   }
   
@@ -109,31 +136,41 @@ class GameScene: SKScene, SKPhysicsContactDelegate
     return random() * (max - min) + min
   }
 
-  func addMonster() {
+  //get time elapsed
+  func evaluateProblem() -> Double
+  {
+    
+    let end = NSDate();   // <<<<<<<<<<   end time
 
+    let timeInterval: Double = end.timeIntervalSinceDate(start); // <<<<< Difference in seconds (double)
+    return timeInterval
+  }
+
+  func addCoin()
+  {
     // Create sprite
-    let monster = SKSpriteNode(imageNamed: "monster")
-    monster.physicsBody = SKPhysicsBody(rectangleOfSize: monster.size)
-    monster.physicsBody?.dynamic = true
-    monster.physicsBody?.categoryBitMask = PhysicsCategory.Monster
-    monster.physicsBody?.contactTestBitMask = PhysicsCategory.Projectile
-    monster.physicsBody?.collisionBitMask = PhysicsCategory.None
+    let coin = SKSpriteNode(imageNamed: "Coin_Sprite")
+    coin.physicsBody = SKPhysicsBody(rectangleOfSize: coin.size)
+    coin.physicsBody?.dynamic = true
+    coin.physicsBody?.categoryBitMask = PhysicsCategory.Coin
+    coin.physicsBody?.contactTestBitMask = PhysicsCategory.Projectile
+    coin.physicsBody?.collisionBitMask = PhysicsCategory.None
     
     // Determine where to spawn the monster along the X axis
-    let actualX = random(min: monster.size.width/2, max: size.width - (monster.size.width/2))
+    let actualX = random(min: coin.size.width/2, max: size.width - (coin.size.width/2))
     
     // Position the monster slightly off-screen along the right edge,
     // and along a random position along the Y axis as calculated above
-    monster.position = CGPoint(x: actualX, y: size.height + monster.size.height/2)
+    coin.position = CGPoint(x: actualX, y: size.height + coin.size.height/2)
     
     // Add the monster to the scene
-    addChild(monster)
+    addChild(coin)
     
     // Determine speed of the monster
     let actualDuration = random(min: CGFloat(20.0), max: CGFloat(20.0))
     
     // Create the actions
-    let actionMove = SKAction.moveTo(CGPoint(x: actualX, y: 0 - monster.size.height), duration: NSTimeInterval(actualDuration))
+    let actionMove = SKAction.moveTo(CGPoint(x: actualX, y: 0 - coin.size.height), duration: NSTimeInterval(actualDuration))
     
     let actionMoveDone = SKAction.removeFromParent()
     
@@ -143,9 +180,48 @@ class GameScene: SKScene, SKPhysicsContactDelegate
       let gameOverScene = GameOverScene(size: self.size, won: false)
       self.view?.presentScene(gameOverScene, transition: reveal)
     }
-    monster.runAction(SKAction.sequence([actionMove, loseAction, actionMoveDone]))
+    coin.runAction(SKAction.sequence([actionMove, loseAction, actionMoveDone]))
 
   }
+    
+    func addBill()
+    {
+        // Create sprite
+        let bill = SKSpriteNode(imageNamed: "Bill_Sprite")
+        bill.physicsBody = SKPhysicsBody(rectangleOfSize: bill.size)
+        bill.physicsBody?.dynamic = true
+        bill.physicsBody?.categoryBitMask = PhysicsCategory.Bill
+        bill.physicsBody?.contactTestBitMask = PhysicsCategory.Projectile
+        bill.physicsBody?.collisionBitMask = PhysicsCategory.None
+        
+        // Determine where to spawn the monster along the X axis
+        let actualX = random(min: bill.size.width/2, max: size.width - (bill.size.width/2))
+        
+        // Position the monster slightly off-screen along the right edge,
+        // and along a random position along the Y axis as calculated above
+        bill.position = CGPoint(x: actualX, y: size.height + bill.size.height/2)
+        
+        // Add the monster to the scene
+        addChild(bill)
+        
+        // Determine speed of the monster
+        let actualDuration = random(min: CGFloat(20.0), max: CGFloat(20.0))
+        
+        // Create the actions
+        let actionMove = SKAction.moveTo(CGPoint(x: actualX, y: 0 - bill.size.height), duration: NSTimeInterval(actualDuration))
+        
+        let actionMoveDone = SKAction.removeFromParent()
+        
+        let loseAction = SKAction.runBlock()
+            {
+                let reveal = SKTransition.fadeWithDuration(0.5)
+                let gameOverScene = GameOverScene(size: self.size, won: false)
+                self.view?.presentScene(gameOverScene, transition: reveal)
+        }
+        bill.runAction(SKAction.sequence([actionMove, loseAction, actionMoveDone]))
+        
+    }
+
   
   override func touchesEnded(touches: Set<NSObject>, withEvent event: UIEvent)
   {
@@ -156,16 +232,19 @@ class GameScene: SKScene, SKPhysicsContactDelegate
     let touch = touches.first as! UITouch
     let touchLocation = touch.locationInNode(self)
     
-    var point = CGPoint(x: touchLocation.x, y: player.position.y)
+    var targetPoint = CGPoint(x: touchLocation.x, y: player.position.y)
    
-    //stuff
-    var actualDuration:NSTimeInterval = 1.0
-    var actionMove = SKAction.moveTo(point, duration: actualDuration)
+    //calculate the time it takes to move that distance
+    var horizontalDistance = abs(touchLocation.x - player.position.x)
+    var multiplier = horizontalDistance / 100.0
+    var actualDuration:NSTimeInterval = NSTimeInterval(multiplier)
+    var actionMove = SKAction.moveTo(targetPoint, duration: actualDuration)
     player.runAction(actionMove)
     
   }
   
-  func projectileDidCollideWithMonster(projectile:SKSpriteNode, monster:SKSpriteNode) {
+  func projectileDidCollideWithMonster(projectile:SKSpriteNode, monster:SKSpriteNode)
+  {
     println("Hit")
     projectile.removeFromParent()
     monster.removeFromParent()
@@ -178,6 +257,26 @@ class GameScene: SKScene, SKPhysicsContactDelegate
     }
     
   }
+    
+  //got a coin
+  func collectedCoin(projectile:SKSpriteNode, monster:SKSpriteNode)
+  {
+      println("Got Coin")
+      projectile.removeFromParent()
+      monster.removeFromParent()
+        
+      coinsCollected++
+  }
+    
+  //got a bill
+    func collectedBill(projectile:SKSpriteNode, monster:SKSpriteNode)
+    {
+        println("Got Bill")
+        projectile.removeFromParent()
+        monster.removeFromParent()
+        
+        billsCollected++
+    }
   
   func didBeginContact(contact: SKPhysicsContact)
   {
@@ -185,17 +284,22 @@ class GameScene: SKScene, SKPhysicsContactDelegate
     // 1
     var firstBody: SKPhysicsBody
     var secondBody: SKPhysicsBody
-    if contact.bodyA.categoryBitMask < contact.bodyB.categoryBitMask {
+    
+    if contact.bodyA.categoryBitMask < contact.bodyB.categoryBitMask
+    {
       firstBody = contact.bodyA
       secondBody = contact.bodyB
-    } else {
+    }
+    else
+    {
       firstBody = contact.bodyB
       secondBody = contact.bodyA
     }
     
     // 2
-    if ((firstBody.categoryBitMask & PhysicsCategory.Monster != 0) &&
-        (secondBody.categoryBitMask & PhysicsCategory.Projectile != 0)) {
+    if ((firstBody.categoryBitMask & PhysicsCategory.Coin != 0) &&
+        (secondBody.categoryBitMask & PhysicsCategory.Projectile != 0))
+    {
       projectileDidCollideWithMonster(firstBody.node as! SKSpriteNode, monster: secondBody.node as! SKSpriteNode)
     }
     
