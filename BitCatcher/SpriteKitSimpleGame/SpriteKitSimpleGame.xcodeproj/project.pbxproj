@@ -19,13 +19,14 @@
 		3571650D19DB1F5500ED38A9 /* pew-pew-lei.caf in Resources */ = {isa = PBXBuildFile; fileRef = 3571650A19DB1F5500ED38A9 /* pew-pew-lei.caf */; };
 		3571650E19DB1F5500ED38A9 /* sprites.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 3571650B19DB1F5500ED38A9 /* sprites.atlas */; };
 		3571651019DB322700ED38A9 /* GameOverScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3571650F19DB322700ED38A9 /* GameOverScene.swift */; };
+		ED3828471B801B40007E6976 /* mainScreenNew.png in Resources */ = {isa = PBXBuildFile; fileRef = ED3828461B801B40007E6976 /* mainScreenNew.png */; };
+		ED3828491B801B82007E6976 /* newestMainscreen.png in Resources */ = {isa = PBXBuildFile; fileRef = ED3828481B801B82007E6976 /* newestMainscreen.png */; };
 		ED535F741B8011AE00FF5C2B /* about_button.png in Resources */ = {isa = PBXBuildFile; fileRef = ED535F711B8011AE00FF5C2B /* about_button.png */; };
 		ED535F751B8011AE00FF5C2B /* play_button.png in Resources */ = {isa = PBXBuildFile; fileRef = ED535F721B8011AE00FF5C2B /* play_button.png */; };
 		ED535F761B8011AE00FF5C2B /* score_button.png in Resources */ = {isa = PBXBuildFile; fileRef = ED535F731B8011AE00FF5C2B /* score_button.png */; };
 		EDCA63D31B7F770B00177C97 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDCA63D21B7F770B00177C97 /* LoginViewController.swift */; };
 		EDCA63E11B7F920100177C97 /* bitplayer.png in Resources */ = {isa = PBXBuildFile; fileRef = EDCA63E01B7F920100177C97 /* bitplayer.png */; };
 		EDCA63E31B7FA26300177C97 /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = EDCA63E21B7FA26300177C97 /* background.png */; };
-		EDCA63E51B7FED8700177C97 /* mainscreen.png in Resources */ = {isa = PBXBuildFile; fileRef = EDCA63E41B7FED8700177C97 /* mainscreen.png */; };
 		EDCA63E81B7FFA5500177C97 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDCA63E61B7FFA5500177C97 /* Bolts.framework */; };
 		EDCA63E91B7FFA5500177C97 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDCA63E71B7FFA5500177C97 /* Parse.framework */; };
 		EDCA63EB1B7FFA6D00177C97 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDCA63EA1B7FFA6C00177C97 /* AudioToolbox.framework */; };
@@ -68,13 +69,14 @@
 		3571650A19DB1F5500ED38A9 /* pew-pew-lei.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "pew-pew-lei.caf"; sourceTree = "<group>"; };
 		3571650B19DB1F5500ED38A9 /* sprites.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = sprites.atlas; sourceTree = "<group>"; };
 		3571650F19DB322700ED38A9 /* GameOverScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameOverScene.swift; sourceTree = "<group>"; };
+		ED3828461B801B40007E6976 /* mainScreenNew.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = mainScreenNew.png; path = ../../Assets/mainScreenNew.png; sourceTree = "<group>"; };
+		ED3828481B801B82007E6976 /* newestMainscreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = newestMainscreen.png; path = ../../Assets/newestMainscreen.png; sourceTree = "<group>"; };
 		ED535F711B8011AE00FF5C2B /* about_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = about_button.png; path = ../../Assets/about_button.png; sourceTree = "<group>"; };
 		ED535F721B8011AE00FF5C2B /* play_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = play_button.png; path = ../../Assets/play_button.png; sourceTree = "<group>"; };
 		ED535F731B8011AE00FF5C2B /* score_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = score_button.png; path = ../../Assets/score_button.png; sourceTree = "<group>"; };
 		EDCA63D21B7F770B00177C97 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		EDCA63E01B7F920100177C97 /* bitplayer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bitplayer.png; path = sprites.atlas/bitplayer.png; sourceTree = "<group>"; };
 		EDCA63E21B7FA26300177C97 /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = background.png; path = Images.xcassets/background.png; sourceTree = "<group>"; };
-		EDCA63E41B7FED8700177C97 /* mainscreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = mainscreen.png; path = ../../Assets/mainscreen.png; sourceTree = "<group>"; };
 		EDCA63E61B7FFA5500177C97 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Bolts.framework; path = "parse-library-1.8.0/Bolts.framework"; sourceTree = "<group>"; };
 		EDCA63E71B7FFA5500177C97 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Parse.framework; path = "parse-library-1.8.0/Parse.framework"; sourceTree = "<group>"; };
 		EDCA63EA1B7FFA6C00177C97 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
@@ -159,10 +161,11 @@
 				EDCA63FE1B7FFDEA00177C97 /* RestHelper.swift */,
 				EDCA63E21B7FA26300177C97 /* background.png */,
 				EDCA63E01B7F920100177C97 /* bitplayer.png */,
-				EDCA63E41B7FED8700177C97 /* mainscreen.png */,
+				ED3828481B801B82007E6976 /* newestMainscreen.png */,
 				ED535F711B8011AE00FF5C2B /* about_button.png */,
 				ED535F721B8011AE00FF5C2B /* play_button.png */,
 				ED535F731B8011AE00FF5C2B /* score_button.png */,
+				ED3828461B801B40007E6976 /* mainScreenNew.png */,
 				EDCA63D21B7F770B00177C97 /* LoginViewController.swift */,
 				357164E619DB1E4800ED38A9 /* GameScene.sks */,
 				357164E819DB1E4800ED38A9 /* GameScene.swift */,
@@ -291,14 +294,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				ED535F741B8011AE00FF5C2B /* about_button.png in Resources */,
-				EDCA63E51B7FED8700177C97 /* mainscreen.png in Resources */,
 				3571650E19DB1F5500ED38A9 /* sprites.atlas in Resources */,
 				3571650C19DB1F5500ED38A9 /* background-music-aac.caf in Resources */,
 				357164F319DB1E4800ED38A9 /* LaunchScreen.xib in Resources */,
 				357164F019DB1E4800ED38A9 /* Images.xcassets in Resources */,
 				EDCA63E11B7F920100177C97 /* bitplayer.png in Resources */,
+				ED3828491B801B82007E6976 /* newestMainscreen.png in Resources */,
 				ED535F751B8011AE00FF5C2B /* play_button.png in Resources */,
 				357164E719DB1E4800ED38A9 /* GameScene.sks in Resources */,
+				ED3828471B801B40007E6976 /* mainScreenNew.png in Resources */,
 				ED535F761B8011AE00FF5C2B /* score_button.png in Resources */,
 				357164EE19DB1E4800ED38A9 /* Main.storyboard in Resources */,
 				EDCA63E31B7FA26300177C97 /* background.png in Resources */,
