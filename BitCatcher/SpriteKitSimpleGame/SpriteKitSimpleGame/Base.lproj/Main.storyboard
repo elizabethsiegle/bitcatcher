@@ -21,34 +21,24 @@
                                 <rect key="frame" x="-16" y="0.0" width="632" height="600"/>
                                 <animations/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d1p-45-CXK">
-                                <rect key="frame" x="285" y="285" width="30" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mb4-yj-ar5">
+                                <rect key="frame" x="384" y="247" width="216" height="203"/>
                                 <animations/>
-                                <state key="normal" title="Play">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="LVB-YS-i5n" kind="show" id="DqH-na-FLy"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zB5-EE-1OS">
-                                <rect key="frame" x="231" y="285" width="46" height="30"/>
-                                <animations/>
-                                <state key="normal" title="About">
+                                <state key="normal" image="score_button">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nyH-62-kjm">
-                                <rect key="frame" x="323" y="285" width="70" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L85-By-eaq">
+                                <rect key="frame" x="192" y="247" width="216" height="203"/>
                                 <animations/>
-                                <state key="normal" title="Highscore">
+                                <state key="normal" image="play_button">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wlr-wg-cCt">
-                                <rect key="frame" x="265" y="306" width="70" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ppm-nb-Y6p">
+                                <rect key="frame" x="0.0" y="247" width="216" height="203"/>
                                 <animations/>
-                                <state key="normal" title="Insert 25¢">
+                                <state key="normal" image="about_button">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
@@ -57,8 +47,6 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="rdl-XK-m8E" secondAttribute="trailing" constant="-32" id="RF3-P1-x0q"/>
-                            <constraint firstAttribute="centerY" secondItem="d1p-45-CXK" secondAttribute="centerY" id="b3E-8Z-Hdp"/>
-                            <constraint firstAttribute="centerX" secondItem="d1p-45-CXK" secondAttribute="centerX" id="iyE-A5-Ynp"/>
                             <constraint firstAttribute="centerX" secondItem="rdl-XK-m8E" secondAttribute="centerX" id="n9M-fw-gtS"/>
                             <constraint firstAttribute="centerY" secondItem="rdl-XK-m8E" secondAttribute="centerY" id="nmQ-Oi-7Fx"/>
                             <constraint firstItem="rdl-XK-m8E" firstAttribute="leading" secondItem="2M1-I5-LGd" secondAttribute="leadingMargin" constant="-32" id="tgG-QD-R6f"/>
@@ -90,6 +78,9 @@
         </scene>
     </scenes>
     <resources>
+        <image name="about_button" width="500" height="500"/>
         <image name="mainscreen" width="2028" height="1080"/>
+        <image name="play_button" width="500" height="500"/>
+        <image name="score_button" width="500" height="500"/>
     </resources>
 </document>
