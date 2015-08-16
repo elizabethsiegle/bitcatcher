@@ -198,6 +198,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate
             {
                 //check to see if you got the hi-score
                 var query = PFQuery(className: "HighScore")
+                var highScore = query.getFirstObject()
                 
                 let reveal = SKTransition.fadeWithDuration(0.5)
                 let gameOverScene = GameOverScene(size: self.size, won: false)

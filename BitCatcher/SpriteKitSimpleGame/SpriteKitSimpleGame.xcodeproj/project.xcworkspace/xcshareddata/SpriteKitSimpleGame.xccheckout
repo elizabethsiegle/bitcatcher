@@ -7,14 +7,14 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>75CD5FB2-53D4-4EB1-BA9D-FD947AFFB538</string>
 	<key>IDESourceControlProjectName</key>
-	<string>SpriteKitSimpleGame</string>
+	<string>project</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>D051BF07A07AE27FB6286713AB303E8E9EFEB948</key>
 		<string>https://github.com/elizabethsiegle/bitcatcher.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>BitCatcher/SpriteKitSimpleGame/SpriteKitSimpleGame.xcodeproj</string>
+	<string>BitCatcher/SpriteKitSimpleGame/SpriteKitSimpleGame.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>D051BF07A07AE27FB6286713AB303E8E9EFEB948</key>
